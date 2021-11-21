@@ -192,6 +192,7 @@ def frame_extraction(video_path):
     flag, frame = vid.read()
     cnt = 0
     while flag:
+        print("\r frame_extraction: "+str(cnt), end="")
         frames.append(frame)
         frame_path = frame_tmpl.format(cnt + 1)
         frame_paths.append(frame_path)
